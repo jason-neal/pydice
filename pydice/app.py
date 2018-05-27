@@ -8,6 +8,10 @@ class Pydice(toga.App):
     self.nsides = 6
     self.ndice = 2
 
+    def roll_dice(self):
+        # Roll the n dice
+        return [random.randint(1, self.nsides) for _ in range(self.ndice)]
+
     def startup(self):
         # Create a main window with a name matching the app
         self.main_window = toga.MainWindow(title=self.name)
